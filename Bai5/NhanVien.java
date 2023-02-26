@@ -49,7 +49,7 @@ public class NhanVien {
     }
     
     public boolean tangLuong(){
-        if (luongCoBan> LUONG_MAX){
+        if (Luong > LUONG_MAX){
             System.out.print("Khong duoc phep thay doi");
             return false;
         }
