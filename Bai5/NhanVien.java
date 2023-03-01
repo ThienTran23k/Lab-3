@@ -1,5 +1,6 @@
 package Bai5;
 
+import java.util.Scanner;
 
 public class NhanVien {
     public String tenNhanVien;
@@ -47,9 +48,12 @@ public class NhanVien {
     public String inTTin(){
         return " Ten nhan vien : " + tenNhanVien ;
     }
-    
+    Scanner input = new Scanner(System.in);
     public boolean tangLuong(){
-        if (Luong > LUONG_MAX){
+        System.out.print("Nhap he so luong tang them :");
+        double hesoTangThem = input.nextDouble();
+        double luong = luongCoBan * (heSoLuong + hesoTangThem);
+        if (luong> LUONG_MAX){
             System.out.print("Khong duoc phep thay doi");
             return false;
         }
